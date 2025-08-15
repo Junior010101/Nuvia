@@ -1,5 +1,4 @@
-import { Component, inject } from '@angular/core';
-import { Title } from '@angular/platform-browser';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-start',
@@ -8,9 +7,12 @@ import { Title } from '@angular/platform-browser';
   styleUrl: './start.css'
 })
 export class Start {
-  private readonly titleService = inject(Title);
+  logoPath = 'assets/Favicon.png';
+  vectorPath = 'assets/Vector.png';
 
-  title() {
-    return this.titleService.getTitle();
+  continuar() {
+    console.log('Botão Continuar clicado');
+    // Se tiver roteamento:
+    // this.router.navigate(['/proxima-pagina']);
   }
 }
