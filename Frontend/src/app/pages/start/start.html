@@ -1,15 +1,57 @@
-<div class="container">
-  <div class="text-content">
-    <img src="assets/Favicon.png" alt="Logo Nuvia" class="logo-img" />
-    <h2>Pronto para <span style="color: #0015ff">estudar?</span></h2>
-    <p class="description">
-      But I must explain to you how all this mistaken idea of denouncing
-      pleasure and praising pain was born.
-    </p>
-    <button class="btn">Continuar</button>
+<div class="bg-[#FFC05C]">
+  <div class="d-flex h-screen">
+    <!-- Lado esquerdo -->
+    <div
+      class="relative w-1/2 flex flex-col justify-items-center h-screen px-12 bg-white rounded-r-full"
+    >
+      <img
+        [src]="logoPath"
+        (error)="Ilustracao = 'assets/img/image.png'"
+        class="w-48 justify-self-start mt-5"
+      />
+
+      <div class="z-10 mt-20">
+        <h1 class="text-4xl font-bold pb-4">
+          <span class="text-5xl font-black">Pronto</span>
+          <span class="text-2xl">para</span><br />
+          <span class="text-blue-500 text-6xl font-black underline"
+            >Estudar?</span
+          >
+        </h1>
+        <p class="text-base font-medium">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae,
+          assumenda accusantium iure quisquam impedit consequuntur laborum ipsum
+          magnam. Tempore quidem aliquid, veritatis illum dolorem libero
+          voluptatum ipsum voluptates.
+        </p>
+        <p class="mt-4 text-sm text-gray-600">
+          But I must explain to you how all this mistaken idea of denouncing
+          pleasure...
+        </p>
+        <button class="btn btn-primary" (click)="continuar()">Continuar</button>
+      </div>
+
+      <!-- curva simples -->
+      <svg
+        class="absolute m-0 p-0 z-0"
+        width="1025"
+        height="100dvh"
+        viewBox="0 0 700 1005"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g filter="url(#filter0_d_396_200)">
+          <path
+            d="M691.775 1026.68C664.757 1022.08 609.7 960.416 605.618 750.589C600.516 488.306 614.586 439.156 585.414 340.749C556.241 242.342 506.084 152.092 518.894 29.1751C519.86 10.9635 515.958 0.950792 488 0.898663L5.91023 0.898605L4.00003 1025.4L691.775 1026.68Z"
+            fill="white"
+          />
+        </g>
+      </svg>
+    </div>
+
+    <!-- Lado direito -->
+    <div class="w-1/2 flex items-center justify-center">
+      <img [src]="Ilustracao" (error)="Ilustracao = 'assets/img/image.png'" />
+    </div>
   </div>
-  <div class="illustration">
-    <img src="assets/Vector.png" alt="Ilustração livros e pessoas" />
-  </div>
-  <div class="wave"></div>
 </div>

@@ -4,14 +4,13 @@ import { Component } from '@angular/core';
   selector: 'app-start',
   imports: [],
   templateUrl: './start.html',
-  styleUrl: './start.css'
+  styleUrl: './start.css',
 })
 export class Start {
-  logoPath = 'assets/Favicon.png';
-  vectorPath = 'assets/Vector.png';
+  logoPath = 'assets/img/Favicon.png';
+  Ilustracao = 'assets/svg/boy-9087310.svg';
 
   continuar() {
-    console.log('Botão Continuar clicado');
     // Se tiver roteamento:
     // this.router.navigate(['/proxima-pagina']);
   }
