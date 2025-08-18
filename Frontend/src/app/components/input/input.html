@@ -1,9 +1,14 @@
-<div class="mb-3">
-  <label for="exampleInputEmail1" class="form-label">Email address</label>
+<div class="justify-center mt-4 {{ Class }}">
   <input
     type="email"
-    class="form-control"
+    class="form-control bg-[#F7FAFC] p-2"
     id="exampleInputEmail1"
     aria-describedby="emailHelp"
+    [style.width]="w"
   />
+  <label
+    for="exampleInputEmail1"
+    class="-mt-8.5 ml-2 form-label absolute text-[#4A739C]"
+    >{{ Text }}</label
+  >
 </div>

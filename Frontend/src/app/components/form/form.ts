@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-import { Input } from '../input/input';
+import { InputText } from '../input/input';
 
 @Component({
   selector: 'app-form',
-  imports: [Input],
+  imports: [InputText],
   templateUrl: './form.html',
   styleUrl: './form.css',
 })

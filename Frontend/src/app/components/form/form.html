@@ -1,13 +1,9 @@
 <div class="caixa-login">
   <h2>Login</h2>
   <form>
-    <app-input />
-    <div class="grupo-input">
-      <input type="email" placeholder="Email" />
-    </div>
-    <div class="grupo-input">
-      <input type="password" placeholder="Senha" />
-    </div>
+    <app-input [w]="'auto'" [Text]="'Email'" />
+    <app-input [w]="'auto'" [Text]="'Senha'" [Class]="'mb-4'" />
+
     <button type="submit" class="botao">Entrar</button>
   </form>
   <p class="texto-cadastro">

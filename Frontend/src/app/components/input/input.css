@@ -1,0 +1,13 @@
+input:focus ~ label,
+input:not(:valid) ~ label {
+  animation: anime 90ms linear forwards;
+}
+
+@keyframes anime {
+  from {
+    margin-top: -34px;
+  }
+  to {
+    margin-top: -70px;
+  }
+}
