@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
+import { Input } from '../input/input';
 
 @Component({
   selector: 'app-form',
-  imports: [],
+  imports: [Input],
   templateUrl: './form.html',
-  styleUrl: './form.css'
+  styleUrl: './form.css',
 })
-export class Form {
-
-}
+export class Form {}

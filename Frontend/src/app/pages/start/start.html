@@ -28,7 +28,12 @@
           But I must explain to you how all this mistaken idea of denouncing
           pleasure...
         </p>
-        <button class="btn btn-primary" (click)="continuar()">Continuar</button>
+        <app-button
+          [valor]="'Continuar'"
+          [link]="'/login'"
+          [w]="'50%'"
+          [h]="'17%'"
+        ></app-button>
       </div>
 
       <!-- curva simples -->

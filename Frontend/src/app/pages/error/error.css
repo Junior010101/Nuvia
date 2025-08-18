@@ -1,0 +1,19 @@
+.error-container {
+  height: 100vh;
+  background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+  padding: 20px;
+}
+
+.error-container h1 {
+  font-size: 8rem;
+  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+.error-container p {
+  margin-bottom: 15px;
+}
+
+.error-container .btn,
+.error-container app-button {
+  margin-top: 20px;
+}

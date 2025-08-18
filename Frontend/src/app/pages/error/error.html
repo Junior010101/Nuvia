@@ -1,0 +1,29 @@
+<div
+  class="error-container text-center d-flex flex-column justify-content-center align-items-center"
+>
+  @if (code == 404) {
+  <h1 class="display-1 fw-bold text-danger">404</h1>
+  <p class="lead">Oops! Página não encontrada.</p>
+  <p class="text-muted">
+    A página que você procura pode ter sido removida ou nunca existiu.
+  </p>
+  <app-button
+    [valor]="'Voltar para o início'"
+    [link]="'/'"
+    [w]="'100%'"
+    [h]="'100%'"
+  />
+  } @if (code == 403) {
+  <h1 class="display-1 fw-bold text-warning">403</h1>
+  <p class="lead">Acesso negado.</p>
+  <p class="text-muted">
+    Você não tem permissão para acessar esta página. Faça login para continuar.
+  </p>
+  <app-button
+    [valor]="'Fazer login'"
+    [link]="'/login'"
+    [w]="'100%'"
+    [h]="'100%'"
+  />
+  }
+</div>
