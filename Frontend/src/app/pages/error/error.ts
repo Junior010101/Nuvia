@@ -11,6 +11,7 @@ import { Button } from '../../components/button/button';
 export class Error {
   code: number = 0;
   msg: string = '';
+  TextStyle: any = 'text-[#263238]';
 
   constructor(private route: ActivatedRoute, private router: Router) {
     this.route.queryParams.subscribe((params) => {
@@ -28,6 +29,9 @@ export class Error {
 
       // Define o título da página dinamicamente **depois que this.msg foi setada**
       document.title = 'Erro: ' + this.msg;
+      code === 404
+        ? (this.TextStyle = 'text-danger')
+        : (this.TextStyle = 'text-warning');
     });
   }
 }

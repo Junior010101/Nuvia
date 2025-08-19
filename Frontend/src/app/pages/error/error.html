@@ -1,52 +1,63 @@
 <div
   class="error-wrapper d-flex justify-content-center align-items-center min-vh-100 bg-amber-200"
 >
-  <div class="row">
-    <!-- Texto -->
+  <!-- Logo fixa -->
 
-    <div
-      class="col-md-6 d-flex flex-column justify-content-start align-items-start p-5"
-    >
-      <img
-        src="assets/img/Favicon.png"
-        alt="Logo"
-        class="w-48 -mt-36 absolute self-start"
-      />
-      @if (code == 404) {
+  <div class="container">
+    <img src="assets/img/Favicon.png" alt="Logo" class="logo-fixa ml-8" />
 
-      <h2 class="fw-bold text-danger mb-3">Opss...</h2>
-      <h3 class="fw-bold mb-3">Página não encontrada</h3>
-      <p class="text-muted mb-4">
-        A página que você procura pode ter sido removida, renomeada ou nunca
-        existiu.
-      </p>
-      <app-button [valor]="'Voltar'" [link]="'/'" [w]="'300px'" [h]="'59px'" />
-      } @if (code == 403) {
-      <h2 class="fw-bold text-warning mb-3">Opss...</h2>
-      <h3 class="fw-bold mb-3">Acesso negado</h3>
-      <p class="text-muted mb-4">
-        Você não tem permissão para acessar esta página. Faça login para
-        continuar.
-      </p>
-      <app-button
-        [valor]="'Logar'"
-        [link]="'/login'"
-        [w]="'300px'"
-        [h]="'59px'"
-      />
-      }
-    </div>
+    <div class="row align-items-center">
+      <!-- Texto -->
+      <div
+        class="col-lg-5 col-md-6 col-12 d-flex flex-column justify-content-center align-items-start p-5"
+      >
+        @if (code == 404) {
+        <h2 class="fw-bold text-secondary mb-2">Opss...</h2>
 
-    <!-- Imagem com sobreposição do código -->
-    <div
-      class="col-md-6 d-flex justify-content-center align-items-center position-relative"
-    >
-      <img
-        src="assets/svg/error-illustration.svg"
-        alt="Erro"
-        class="img-fluid"
-      />
-      <div class="error-code-overlay">{{ code }}</div>
+        <h3 class="fw-bold mb-3">Página não encontrada</h3>
+        <p class="text-muted mb-4">
+          A página que você procura pode ter sido removida, renomeada ou nunca
+          existiu.
+        </p>
+        <app-button
+          [valor]="'Voltar'"
+          [link]="'/'"
+          [w]="'300px'"
+          [h]="'59px'"
+        />
+        } @if (code == 403) {
+        <h2 class="fw-bold text-secondary mb-2">Opss...</h2>
+
+        <h3 class="fw-bold mb-3">Acesso negado</h3>
+        <p class="text-muted mb-4">
+          Você não tem permissão para acessar esta página. Faça login para
+          continuar.
+        </p>
+        <app-button
+          [valor]="'Logar'"
+          [link]="'/login'"
+          [w]="'300px'"
+          [h]="'59px'"
+        />
+        }
+      </div>
+
+      <!-- Imagem -->
+      <div
+        class="col-lg-7 col-md-6 col-12 d-flex justify-content-center align-items-center position-relative"
+      >
+        <img
+          src="assets/svg/error-illustration.svg"
+          alt="Erro"
+          class="img-fluid ilustracao"
+        />
+
+        <div
+          class="error-code-overlay fw-bold position-absolute {{ TextStyle }}"
+        >
+          {{ code }}
+        </div>
+      </div>
     </div>
   </div>
 </div>
