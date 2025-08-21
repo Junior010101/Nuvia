@@ -1,12 +1,11 @@
 import { Component } from '@angular/core';
-import { Form } from "../../../components/form/form";
+import { FormLogin } from '../../../components/form-login/form';
+import { FormLayout } from '../../../components/form-layout/form-layout';
 
 @Component({
   selector: 'app-login',
-  imports: [Form],
+  imports: [FormLogin, FormLayout],
   templateUrl: './login.html',
-  styleUrl: './login.css'
+  styleUrls: ['./login.css'],
 })
-export class Login {
-
-}
+export class Login {}
