@@ -6,8 +6,11 @@ import { Component, Input } from '@angular/core';
   templateUrl: './input.html',
   styleUrl: './input.css',
 })
-export class InputText {
+export class input {
   @Input() Text: any;
   @Input() Class: any;
   @Input() w: any;
+  @Input() type: any;
+  show: any = false;
+  @Input() id: any;
 }

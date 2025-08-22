@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Button } from '../button/button';
 import { input } from '../input/input';
 import {
   FormBuilder,
@@ -6,28 +7,27 @@ import {
   ReactiveFormsModule,
   Validators,
 } from '@angular/forms';
-import { Button } from '../button/button';
 
 @Component({
-  selector: 'app-form-login',
-  imports: [input, ReactiveFormsModule, Button],
+  selector: 'app-form-register',
+  imports: [Button, input, ReactiveFormsModule],
   templateUrl: './form.html',
   styleUrl: './form.css',
 })
-export class FormLogin {
-  loginForm: FormGroup;
+export class FormRegister {
+  RegisterForm: FormGroup;
 
   constructor(private fb: FormBuilder) {
-    this.loginForm = this.fb.group({
+    this.RegisterForm = this.fb.group({
       email: ['', [Validators.required, Validators.email]],
       senha: ['', Validators.required],
     });
   }
 
   onSubmit() {
-    const { email, senha } = this.loginForm.value;
+    const { email, senha } = this.RegisterForm.value;
 
-    if (!this.loginForm.valid) {
+    if (!this.RegisterForm.valid) {
       alert('Por favor, preencha todos os campos corretamente!');
       return;
     }

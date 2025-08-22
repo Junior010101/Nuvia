@@ -13,3 +13,6 @@
 .cartao:first-child {
   display: none;
 }
+.logo-fixa {
+  width: 150px;
+}

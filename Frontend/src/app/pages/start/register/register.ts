@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
+import { FormLayout } from '../../../components/form-layout/form-layout';
+import { FormRegister } from '../../../components/form-register/form';
 
 @Component({
   selector: 'app-register',
-  imports: [],
+  imports: [FormLayout, FormRegister],
   templateUrl: './register.html',
-  styleUrl: './register.css'
+  styleUrl: './register.css',
 })
-export class Register {
-
-}
+export class Register {}

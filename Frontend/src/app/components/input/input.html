@@ -1,14 +1,63 @@
-<div class="justify-center mt-4 {{ Class }}">
+<div class="justify-center mt-3 {{ Class }}">
+  @if (type == 'text') {
+  <div class="input-group flex-nowrap">
+    <input
+      type="text"
+      class="form-control bg-[#F7FAFC] p-2"
+      [id]="id"
+      aria-describedby="nameHelp"
+      [style.width]="w"
+      required
+      placeholder=" "
+    />
+    <label
+      [htmlFor]="id"
+      class="ms-2 mt-[8px] select-none cursor-text absolute text-[#4A739C]"
+      >{{ Text }}</label
+    >
+  </div>
+
+  } @if (type == 'email') {
   <input
     type="email"
     class="form-control bg-[#F7FAFC] p-2"
-    id="exampleInputEmail1"
+    [id]="id"
     aria-describedby="emailHelp"
     [style.width]="w"
+    required
+    placeholder=" "
   />
   <label
-    for="exampleInputEmail1"
-    class="-mt-8.5 ml-2 form-label absolute text-[#4A739C]"
+    [htmlFor]="id"
+    class="-mt-8.5 ml-2 select-none cursor-text form-label absolute text-[#4A739C]"
     >{{ Text }}</label
   >
+  } @if (type == 'password') {
+  <div class="input-group flex-nowrap">
+    <input
+      [type]="show ? 'text' : 'password'"
+      class="form-control bg-[#F7FAFC] p-2"
+      [id]="id"
+      aria-describedby="passwordHelp"
+      [style.width]="w"
+      required
+      placeholder=" "
+    />
+    <button
+      class="btn btn-outline-secondary w-12 border rounded-end {{
+        show ? 'active' : 'none'
+      }}"
+      type="button"
+      (click)="show = !show"
+    >
+      <i class="{{ show ? 'bi bi-eye-fill' : 'bi bi-eye-slash' }}"></i>
+    </button>
+    <label
+      [htmlFor]="id"
+      class="ms-2 mt-[8px] select-none cursor-text absolute text-[#4A739C]"
+      >{{ Text }}</label
+    >
+  </div>
+
+  }
 </div>

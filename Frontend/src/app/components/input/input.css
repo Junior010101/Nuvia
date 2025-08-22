@@ -1,6 +1,12 @@
-input:focus ~ label,
-input:not(:valid) ~ label {
-  animation: anime 90ms linear forwards;
+input[type="email"]:focus ~ label,
+input[type="email"]:not(:placeholder-shown) ~ label {
+  animation: anime 90ms ease-out forwards;
+}
+input[type="text"]:focus ~ label,
+input[type="text"]:not(:placeholder-shown) ~ label,
+input[type="password"]:focus ~ label,
+input[type="password"]:not(:placeholder-shown) ~ label {
+  animation: anime2 90ms ease-out forwards;
 }
 
 @keyframes anime {
@@ -9,5 +15,13 @@ input:not(:valid) ~ label {
   }
   to {
     margin-top: -70px;
+  }
+}
+@keyframes anime2 {
+  from {
+    margin-top: 0px;
+  }
+  to {
+    margin-top: -28px;
   }
 }
