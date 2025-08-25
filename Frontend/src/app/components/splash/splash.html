@@ -1,0 +1,12 @@
+@if (isMounted && showSplash) {
+<div
+  class="fixed inset-0 flex items-center justify-center bg-white z-50 transition-opacity duration-700"
+  [class.opacity-0]="!isVisible"
+>
+  <ng-lottie
+    [options]="options"
+    (complete)="onAnimationComplete()"
+    class="w-64 h-64"
+  ></ng-lottie>
+</div>
+}

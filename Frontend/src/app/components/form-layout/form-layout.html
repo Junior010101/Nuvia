@@ -47,10 +47,9 @@
     <div class="mt-24 flex justify-center gap-2 z-10">
       @for (card of cards; track card.title; let i = $index) {
       <div
-        class="w-2 h-2 rounded-full cursor-pointer"
+        class="w-2 h-2 rounded-full"
         [class.bg-gray-800]="i === activeCardIndex"
         [class.bg-gray-400]="i !== activeCardIndex"
-        (click)="selectCard(i)"
       ></div>
       }
     </div>

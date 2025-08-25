@@ -23,6 +23,10 @@
 
   <p class="text-center text-sm">
     Ainda não tem uma conta?
-    <a href="/cadastro" class="text-purple-600">Cadastrar</a>
+    <a
+      (click)="this.router.navigateByUrl('/cadastro')"
+      class="text-purple-600 cursor-pointer"
+      >Cadastrar</a
+    >
   </p>
 </form>

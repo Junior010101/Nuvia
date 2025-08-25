@@ -1,3 +1,9 @@
+<a
+  class="self-start -ml-16 icon-link icon-link-hover cursor-pointer"
+  (click)="this.router.navigateByUrl('/login')"
+>
+  <i class="bi bi-arrow-left text-black text-2xl"></i>
+</a>
 <form
   [formGroup]="RegisterForm"
   (ngSubmit)="onSubmit()"
@@ -30,8 +36,8 @@
   />
 
   <app-button
-    [valor]="'Entrar'"
-    [link]="'/'"
+    [valor]="'Cadastrar'"
+    [link]="'/login'"
     [w]="'100%'"
     [h]="'45px'"
   ></app-button>
