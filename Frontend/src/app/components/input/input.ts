@@ -1,8 +1,13 @@
 import { Component, Input } from '@angular/core';
+import {
+  AbstractControl,
+  FormControl,
+  ReactiveFormsModule,
+} from '@angular/forms';
 
 @Component({
   selector: 'app-input',
-  imports: [],
+  imports: [ReactiveFormsModule],
   templateUrl: './input.html',
   styleUrl: './input.css',
 })
@@ -13,4 +18,5 @@ export class input {
   @Input() type: any;
   show: any = false;
   @Input() id: any;
+  @Input() control: FormControl | any;
 }

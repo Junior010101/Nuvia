@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-form-login',
-  imports: [input, ReactiveFormsModule, Button],
+  imports: [ReactiveFormsModule, input, Button],
   templateUrl: './form.html',
   styleUrl: './form.css',
 })
@@ -29,7 +29,9 @@ export class FormLogin {
     const { email, senha } = this.loginForm.value;
 
     if (!this.loginForm.valid) {
-      alert('Por favor, preencha todos os campos corretamente!');
+      alert(
+        `Por favor, preencha todos os campos corretamente!, ${email} e ${senha}`
+      );
       return;
     }
 

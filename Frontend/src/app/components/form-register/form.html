@@ -11,34 +11,66 @@
 >
   <h2 class="text-2xl font-semibold text-center">Cadastro</h2>
 
-  <app-input [id]="'nome1'" [type]="'text'" [w]="'100%'" [Text]="'Nome'" />
   <app-input
-    [id]="'sobrenome1'"
-    [type]="'text'"
-    [w]="'100%'"
-    [Text]="'Sobrenome'"
-  />
-  <app-input [id]="'email1'" [type]="'email'" [w]="'100%'" [Text]="'Email'" />
-
-  <app-input
-    [id]="'senha1'"
-    [type]="'password'"
-    [w]="'100%'"
-    [Text]="'Senha'"
+    id="nome1"
+    type="text"
+    w="100%"
+    Text="Nome"
+    [control]="RegisterForm.get('nome')!"
   />
 
   <app-input
-    [id]="'senha2'"
-    [type]="'password'"
-    [w]="'100%'"
-    [Text]="'Confirmar Senha'"
-    [Class]="'mb-4'"
+    id="sobrenome1"
+    type="text"
+    w="100%"
+    Text="Sobrenome"
+    [control]="RegisterForm.get('sobrenome')!"
   />
 
-  <app-button
-    [valor]="'Cadastrar'"
-    [link]="'/login'"
-    [w]="'100%'"
-    [h]="'45px'"
-  ></app-button>
+  <div class="mb-0">
+    <app-input
+      id="email1"
+      type="email"
+      w="100%"
+      Text="Email"
+      [control]="RegisterForm.get('email')!"
+      [Class]="
+        emailInvalid
+          ? 'border border-danger rounded'
+          : emailVazio
+          ? 'border rounded'
+          : 'border border-success rounded'
+      "
+    />
+    @if (emailInvalid) {
+    <p class="text-red-500 text-sm mt-2 mb-0">Email inválido</p>
+    }
+  </div>
+
+  <app-input
+    id="senha1"
+    type="password"
+    w="100%"
+    Text="Senha"
+    [control]="RegisterForm.get('senha')!"
+    [Class]="senha2Invalida ? 'border border-danger rounded' : 'border rounded'"
+  />
+
+  <div class="mb-4">
+    <app-input
+      id="senha2"
+      type="password"
+      w="100%"
+      Text="Confirmar Senha"
+      [control]="RegisterForm.get('senha2')!"
+      [Class]="
+        senha2Invalida ? 'border border-danger rounded' : 'border rounded'
+      "
+    />
+    @if (senha2Invalida) {
+    <p class="text-red-500 text-sm mt-2 mb-0">As senhas não coincidem</p>
+    }
+  </div>
+
+  <app-button [valor]="'Cadastrar'" [w]="'100%'" [h]="'45px'"></app-button>
 </form>
