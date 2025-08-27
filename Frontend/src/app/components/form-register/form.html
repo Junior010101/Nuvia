@@ -27,20 +27,14 @@
     [control]="RegisterForm.get('sobrenome')!"
   />
 
-  <div class="mb-0">
+  <div class="{{ emailInvalid ? '-mb-3' : 'mb-0' }}">
     <app-input
       id="email1"
       type="email"
       w="100%"
       Text="Email"
       [control]="RegisterForm.get('email')!"
-      [Class]="
-        emailInvalid
-          ? 'border border-danger rounded'
-          : emailVazio
-          ? 'border rounded'
-          : 'border border-success rounded'
-      "
+      [Class]="emailInvalid ? 'border-danger' : 'border rounded'"
     />
     @if (emailInvalid) {
     <p class="text-red-500 text-sm mt-2 mb-0">Email inválido</p>
@@ -56,13 +50,14 @@
     [Class]="senha2Invalida ? 'border border-danger rounded' : 'border rounded'"
   />
 
-  <div class="mb-4">
+  <div class="{{ senha2Invalida ? '' : 'mb-4' }}">
     <app-input
       id="senha2"
       type="password"
       w="100%"
       Text="Confirmar Senha"
       [control]="RegisterForm.get('senha2')!"
+      (blurEvent)="verificaSenha2()"
       [Class]="
         senha2Invalida ? 'border border-danger rounded' : 'border rounded'
       "

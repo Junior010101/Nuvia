@@ -5,13 +5,33 @@
 >
   <h2 class="text-2xl font-semibold text-center">Login</h2>
 
-  <app-input [id]="'email1'" [type]="'email'" [w]="'100%'" [Text]="'Email'" />
+  <div class="{{ emailInvalid ? '-mb-3' : 'mb-0' }}">
+    <app-input
+      id="email1"
+      type="email"
+      w="100%"
+      Text="Email"
+      [control]="loginForm.get('email')!"
+      [Class]="
+        emailInvalid
+          ? 'border-danger'
+          : emailVazio
+          ? 'border'
+          : 'border-success'
+      "
+    />
+    @if (emailInvalid) {
+    <p class="text-red-500 text-sm mt-2 mb-0">Email inválido</p>
+    }
+  </div>
+
   <app-input
     [id]="'senha1'"
     [type]="'password'"
     [w]="'100%'"
     [Text]="'Senha'"
     [Class]="'mb-4'"
+    [control]="loginForm.get('senha')!"
   />
 
   <app-button [valor]="'Entrar'" [w]="'100%'" [h]="'45px'"></app-button>

@@ -2,7 +2,7 @@ import { Routes } from '@angular/router';
 import { Start } from './pages/start/start';
 import { Login } from './pages/start/login/login';
 import { Error } from './pages/error/error';
-import { AuthGuard, NoAuthGuard } from './pages/start/auth/auth-module';
+import { AuthGuard, NoAuthGuard } from './core/guards/auth-guard';
 import { Register } from './pages/start/register/register';
 
 export const routes: Routes = [

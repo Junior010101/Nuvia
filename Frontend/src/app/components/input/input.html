@@ -1,4 +1,4 @@
-<div class="justify-center mt-3 {{ Class }}">
+<div class="justify-center border rounded mt-3 {{ Class }}">
   @if (type == 'text') {
   <div class="input-group flex-nowrap">
     <input
@@ -10,6 +10,7 @@
       required
       placeholder=" "
       [formControl]="control"
+      (blur)="onBlur()"
     />
     <label
       [htmlFor]="id"
@@ -28,6 +29,7 @@
     required
     placeholder=" "
     [formControl]="control"
+    (blur)="onBlur()"
   />
   <label
     [htmlFor]="id"
@@ -45,6 +47,7 @@
       required
       placeholder=" "
       [formControl]="control"
+      (blur)="onBlur()"
     />
     <button
       class="btn btn-outline-secondary w-12 border rounded-end {{

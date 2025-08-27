@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { input } from '../input/input';
 import {
   FormBuilder,
+  FormControl,
   FormGroup,
   ReactiveFormsModule,
   Validators,
@@ -16,12 +17,31 @@ import { Router } from '@angular/router';
   styleUrl: './form.css',
 })
 export class FormLogin {
-  loginForm: FormGroup;
+  loginForm: FormGroup = new FormGroup({
+    email: new FormControl('', [Validators.required, Validators.email]),
+    senha: new FormControl('', Validators.required),
+  });
 
-  constructor(private fb: FormBuilder, public router: Router) {
-    this.loginForm = this.fb.group({
-      email: ['', [Validators.required, Validators.email]],
-      senha: ['', Validators.required],
+  constructor(public router: Router) {}
+
+  emailInvalid = false;
+  emailVazio = true;
+
+  ngOnInit() {
+    const emailControl = this.loginForm.get('email');
+
+    // Escuta mudanças de valor
+    emailControl?.valueChanges.subscribe((value) => {
+      if (value === '') {
+        this.emailVazio = true;
+        this.emailInvalid = false;
+      } else if (emailControl.invalid && emailControl.touched) {
+        this.emailVazio = false;
+        this.emailInvalid = true;
+      } else {
+        this.emailVazio = false;
+        this.emailInvalid = false;
+      }
     });
   }
 
@@ -29,9 +49,7 @@ export class FormLogin {
     const { email, senha } = this.loginForm.value;
 
     if (!this.loginForm.valid) {
-      alert(
-        `Por favor, preencha todos os campos corretamente!, ${email} e ${senha}`
-      );
+      alert(`Por favor, preencha todos os campos corretamente!`);
       return;
     }
 
@@ -39,7 +57,7 @@ export class FormLogin {
       alert('Login realizado com sucesso!');
       window.location.href = 'home.html';
     } else {
-      alert('Email ou senha incorretos.');
+      alert('Usuario não cadastrado.');
     }
   }
 }

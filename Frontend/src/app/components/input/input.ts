@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import {
   AbstractControl,
   FormControl,
@@ -19,4 +19,9 @@ export class input {
   show: any = false;
   @Input() id: any;
   @Input() control: FormControl | any;
+  @Output() blurEvent = new EventEmitter<void>();
+
+  onBlur() {
+    this.blurEvent.emit();
+  }
 }
