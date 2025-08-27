@@ -101,7 +101,7 @@ git clone https://github.com/seu-repo/nuvia.git
 cd nuvia
 
 # Suba os containers
-docker-compose up --build
+docker compose up --build
 
 #A aplicação estará disponível em:
 - Frontend → http://localhost:4200
@@ -133,4 +133,5 @@ ng serve
 ## 📜 Licença
 
 Este projeto foi desenvolvido **exclusivamente para fins acadêmicos e empresariais (SESI)**. Não é permitida a distribuição, cópia ou uso fora deste contexto.
+
 
