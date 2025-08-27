@@ -124,12 +124,13 @@ ng serve
 
 | Avatar | Nome | GitHub |
 |--------|------|--------|
-| <img src="https://avatars.githubusercontent.com/u/114392734?v=4" width="60"> | **Diego Gabriel** | [@diego10gabriel](https://github.com/diego10gabriel) |
-| <img src="https://avatars.githubusercontent.com/u/117617513?v=4" width="60"> | **Douglas Santos** | [@douglasrfsantos](https://github.com/douglasrfsantos) |
-| <img src="https://avatars.githubusercontent.com/u/131255329?v=4" width="60"> | **Jotapeqzz** | [@Jotapeqzz](https://github.com/Jotapeqzz) |
-| <img src="https://avatars.githubusercontent.com/u/153625184?v=4" width="60"> | **Vinícius Rodrigues** | [@ViniciusRodrigues0078](https://github.com/ViniciusRodrigues0078) |
-| <img src="https://avatars.githubusercontent.com/u/109530703?v=4" width="60"> | **Júnior** | [@Junior010101](https://github.com/Junior010101) |
+| <img src="https://avatars.githubusercontent.com/u/169189388?v=4" width="60"> | **Diego Gabriel** | [@diego10gabriel](https://github.com/diego10gabriel) |
+| <img src="https://avatars.githubusercontent.com/u/169695398?v=4" width="60"> | **Douglas Santos** | [@douglasrfsantos](https://github.com/douglasrfsantos) |
+| <img src="https://avatars.githubusercontent.com/u/169388159?v=4" width="60"> | **Jotapeqzz** | [@Jotapeqzz](https://github.com/Jotapeqzz) |
+| <img src="https://avatars.githubusercontent.com/u/169188968?v=4" width="60"> | **Vinícius Rodrigues** | [@ViniciusRodrigues0078](https://github.com/ViniciusRodrigues0078) |
+| <img src="https://avatars.githubusercontent.com/u/162238592?v=4" width="60"> | **Júnior** | [@Junior010101](https://github.com/Junior010101) |
 
 ## 📜 Licença
 
 Este projeto foi desenvolvido **exclusivamente para fins acadêmicos e empresariais (SESI)**. Não é permitida a distribuição, cópia ou uso fora deste contexto.
+
