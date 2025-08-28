@@ -127,12 +127,13 @@ ng serve
 | <img src="https://avatars.githubusercontent.com/u/169189388?v=4" width="60"> | **Diego Gabriel** | [@diego10gabriel](https://github.com/diego10gabriel) |
 | <img src="https://avatars.githubusercontent.com/u/169695398?v=4" width="60"> | **Douglas Santos** | [@douglasrfsantos](https://github.com/douglasrfsantos) |
 | <img src="https://avatars.githubusercontent.com/u/169388159?v=4" width="60"> | **Jotapeqzz** | [@Jotapeqzz](https://github.com/Jotapeqzz) |
-| <img src="https://avatars.githubusercontent.com/u/203883716?v=4" width="60"> | **Vinícius Rodrigues** | [@ViniciusRodrigues0078](https://github.com/ViniciusRodrigues0079) |
+| <img src="https://avatars.githubusercontent.com/u/203883716?v=4" width="60"> | **Vinícius Rodrigues** | [@ViniciusRodrigues0079](https://github.com/ViniciusRodrigues0079) |
 | <img src="https://avatars.githubusercontent.com/u/162238592?v=4" width="60"> | **Júnior** | [@Junior010101](https://github.com/Junior010101) |
 
 ## 📜 Licença
 
 Este projeto foi desenvolvido **exclusivamente para fins acadêmicos e empresariais (SESI)**. Não é permitida a distribuição, cópia ou uso fora deste contexto.
+
 
 
 
