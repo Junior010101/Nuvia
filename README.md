@@ -66,18 +66,6 @@ Fluxograma do sistema, detalhando o fluxo de usuários e dados:
 
 [![Figma](https://img.shields.io/badge/Figma-View-blue?logo=figma)](https://www.figma.com/board/K6uekkQey6R03ballExgLq/Fluxograma-Nuvia?t=GPzbP8Z7V2SMTxTA-6)
 
-
-## 📂 Estrutura Backend
-  ```bash
-  src/
-  ├── config/ # conexão com MySQL
-  ├── controllers/ # lógica de cadastro (entrada/saída HTTP)
-  ├── middleware/ # validações e autenticação
-  ├── modules/ # camada de negócio (services, models)
-  ├── utils/ # helpers
-  └── server.ts # ponto de entrada do Express
-  ```
-
 ---
 
 ## 💻 Requisitos de Sistema
@@ -125,14 +113,16 @@ ng serve
 | Avatar | Nome | GitHub |
 |--------|------|--------|
 | <img src="https://avatars.githubusercontent.com/u/169189388?v=4" width="60"> | **Diego Gabriel** | [@diego10gabriel](https://github.com/diego10gabriel) |
-| <img src="https://avatars.githubusercontent.com/u/169695398?v=4" width="60"> | **Douglas Santos** | [@douglasrfsantos](https://github.com/douglasrfsantos) |
+| <img src="https://avatars.githubusercontent.com/u/169695398?v=4" width="60"> | **Douglas Rafael** | [@douglasrfsantos](https://github.com/douglasrfsantos) |
 | <img src="https://avatars.githubusercontent.com/u/169388159?v=4" width="60"> | **Jotapeqzz** | [@Jotapeqzz](https://github.com/Jotapeqzz) |
 | <img src="https://avatars.githubusercontent.com/u/203883716?v=4" width="60"> | **Vinícius Rodrigues** | [@ViniciusRodrigues0079](https://github.com/ViniciusRodrigues0079) |
-| <img src="https://avatars.githubusercontent.com/u/162238592?v=4" width="60"> | **Júnior** | [@Junior010101](https://github.com/Junior010101) |
+| <img src="https://avatars.githubusercontent.com/u/162238592?v=4" width="60"> | **Marcondes_Paixão** | [@Junior010101](https://github.com/Junior010101) |
+| <img src="https://avatars.githubusercontent.com/u/82385947?v=4" width="60"> | **Enzo Andrade** | [@treasurestar](https://github.com/treasurestar) |
 
 ## 📜 Licença
 
 Este projeto foi desenvolvido **exclusivamente para fins acadêmicos e empresariais (SESI)**. Não é permitida a distribuição, cópia ou uso fora deste contexto.
+
 
 
 
