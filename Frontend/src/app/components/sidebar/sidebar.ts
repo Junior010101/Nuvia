@@ -3,10 +3,13 @@ import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-sidebar',
-  imports: [],
   templateUrl: './sidebar.html',
-  styleUrl: './sidebar.css',
+  styleUrls: ['./sidebar.css'],
 })
 export class Sidebar {
-  constructor(public router: Router) {}
+  constructor(private router: Router) {}
+
+  navigateTo(path: string) {
+    this.router.navigateByUrl(path);
+  }
 }

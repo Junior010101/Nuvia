@@ -1,0 +1,129 @@
+:root {
+  --base-font: 16px;
+  --tile-size: min(8vw, 48px); /* tamanho adaptável */
+  --tile-gap: 4px;
+  --tile-font: calc(var(--base-font) * 1.2);
+  --accent: #2b8cff;
+  --bg: #f7f9fc;
+  --tile-bg: #e9f0ff;
+  --tile-found: #2bb673;
+  --tile-selected: #ffd966;
+  --text: #0b2447;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: var(--bg);
+  min-height: 100vh;
+  padding: 10px;
+}
+
+.container {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  padding: 15px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+header h1 {
+  font-size: calc(var(--base-font) * 1.5);
+  text-align: center;
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+
+.game-area {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.board-wrapper {
+  flex: 1 1 300px;
+  display: flex;
+  justify-content: center;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(12, var(--tile-size));
+  gap: var(--tile-gap);
+}
+
+.tile {
+  width: var(--tile-size);
+  height: var(--tile-size);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--tile-bg);
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: var(--tile-font);
+  user-select: none;
+}
+
+.tile.found {
+  background: var(--tile-found);
+  color: white;
+}
+
+.tile.selected {
+  background: var(--tile-selected);
+}
+
+.sidebar {
+  flex: 0 1 220px;
+}
+
+.word-list {
+  list-style: none;
+  margin-bottom: 10px;
+}
+
+.word-list li {
+  background: #f2f8ff;
+  padding: 5px 8px;
+  border-radius: 4px;
+  margin-bottom: 5px;
+}
+
+.word-list li.found {
+  text-decoration: line-through;
+  color: #999;
+}
+
+.controls {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+
+.btn {
+  flex: 1;
+  padding: 6px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background: #ddd;
+}
+
+.btn.primary {
+  background: var(--accent);
+  color: white;
+}
+
+@media (max-width: 600px) {
+  .board {
+    grid-template-columns: repeat(12, var(--tile-size));
+  }
+}

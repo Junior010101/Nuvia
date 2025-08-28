@@ -1,106 +1,34 @@
-<div class="'sidebar">
-  <ul>
-    <li>
-      <a
-        (click)="this.router.navigateByUrl('/')"
-        style="
-          position: absolute;
-          top: 40px;
-          left: 44px;
-          height: 77.67px;
-          width: 58px;
-          box-shadow: 4px 4px 4 0 #ffffff rgba (255, 255, 255, 0.25);
-        "
-      >
-        >
-        <img src="/src/assets/svg/appLogo.svg" />
-      </a>
-    </li>
+<div
+  class="d-flex bg-white flex-column justify-between align-items-center h-100 bg-dark text-white py-3"
+  style="width: 90px; border-radius: 0 20px 20px 0"
+>
+  <!-- Top logo -->
+  <div class="mb-4">
+    <a (click)="navigateTo('/')" class="cursor-pointer">
+      <img src="favicon.ico" alt="Logo" />
+    </a>
+  </div>
 
-    <li>
-      <a
-        (click)="this.router.navigateByUrl('/#')"
-        style="
-          position: absolute;
-          top: 194px;
-          left: 39px;
-          height: 62px;
-          width: 62px;
-        "
-      >
-        <!-- Falta o link para a página dos jogos-->
-        >
-        <img src="/src/assets/svg/gamesButton.svg" />
-      </a>
-    </li>
+  <!-- Middle icons -->
+  <div
+    class="flex-grow-1 d-flex flex-column align-items-center text-[#5D5D5D] secondary gap-4"
+  >
+    <a (click)="navigateTo('/')" class="cursor-pointer link-secondary">
+      <i class="bi bi-file-earmark-word fs-3"></i>
+    </a>
+    <a (click)="navigateTo('/')" class="cursor-pointer link-secondary">
+      <i class="bi bi-file-earmark-text fs-3"></i>
+    </a>
+    <a (click)="navigateTo('/')" class="cursor-pointer link-secondary">
+      <i class="bi bi-play-btn fs-3"></i>
+    </a>
+  </div>
 
-    <li>
-      <a
-        (click)="this.router.navigateByUrl('/#')"
-        style="
-          position: absolute;
-          top: 296px;
-          left: 42px;
-          height: 55px;
-          width: 55px;
-        "
-      >
-        <!-- Falta o link para a página do material didático-->
-        >
-        <img src="/src/assets/svg/bookshelfButton.svg" />
-      </a>
-    </li>
-
-    <li>
-      <a
-        (click)="this.router.navigateByUrl('/#')"
-        style="
-          position: absolute;
-          top: 404px;
-          left: 46px;
-          height: 45.79px;
-          width: 38px;
-        "
-      >
-        <!-- Falta o link para a página dos vídeos de tutorial-->
-        >
-        <img src="/src/assets/svg/tutorialButton.svg" />
-      </a>
-    </li>
-
-    <li>
-      <a
-        (click)="this.router.navigateByUrl('/#')"
-        style="
-          position: absolute;
-          top: 817px;
-          left: 37px;
-          height: 64px;
-          width: 64px;
-        "
-      >
-        <!-- Falta o link para a página das configurações-->
-        >
-        <img src="/src/assets/svg/configButton.svg" />
-      </a>
-    </li>
-
-    <li>
-      <a
-        (click)="this.router.navigateByUrl('/#')"
-        style="
-          position: absolute;
-          top: 920px;
-          left: 41px;
-          height: 60px;
-          width: 60px;
-          box-shadow: 4px 4px 4 0 #ffffff rgba (255, 255, 255, 0.25);
-        "
-      >
-        <!-- Falta o link para a página do perfil-->
-        >
-        <img src="/src/assets/svg/profileButton.svg" />
-      </a>
-    </li>
-  </ul>
+  <!-- Bottom icons -->
+  <div class="d-flex flex-column align-items-center gap-3 text-[#5D5D5D]">
+    <a (click)="navigateTo('/')" class="cursor-pointer link-secondary">
+      <i class="bi bi-gear fs-3"></i>
+    </a>
+    <i class="bi bi-person-circle fs-2"></i>
+  </div>
 </div>
