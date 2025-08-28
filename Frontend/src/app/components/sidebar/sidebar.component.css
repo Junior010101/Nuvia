@@ -1,0 +1,17 @@
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -4px;
+    width: 138px;
+    height: 100vh;
+    background-color: #FFFFFF;
+    border-bottom-right-radius: 50px;
+    border-top-right-radius: 50px;
+
+}
+.sidebar ul {
+    list-style: none;
+}
+.sidebar li {
+
+}
