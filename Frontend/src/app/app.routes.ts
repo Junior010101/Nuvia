@@ -4,6 +4,7 @@ import { Login } from './pages/start/login/login';
 import { Error } from './pages/error/error';
 import { AuthGuard, NoAuthGuard } from './core/guards/auth-guard';
 import { Register } from './pages/start/register/register';
+import { Home } from './pages/home/home';
 
 export const routes: Routes = [
   {
@@ -23,6 +24,12 @@ export const routes: Routes = [
     component: Register,
     canActivate: [NoAuthGuard],
     data: { title: 'Nuvia - cadastro' },
+  },
+  {
+    path: 'dashboard',
+    component: Home,
+    canActivate: [AuthGuard],
+    data: { title: 'Nuvia' },
   },
   {
     path: 'erro',

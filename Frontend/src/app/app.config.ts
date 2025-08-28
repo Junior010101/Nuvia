@@ -6,9 +6,11 @@ import { routes } from './app.routes';
 import { provideLottieOptions } from 'ngx-lottie';
 import {
   ApplicationConfig,
+  importProvidersFrom,
   provideBrowserGlobalErrorListeners,
   provideZoneChangeDetection,
 } from '@angular/core';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -17,11 +19,12 @@ export const appConfig: ApplicationConfig = {
     provideRouter(routes),
     provideAnimations(),
     provideLottieOptions({ player: () => import('lottie-web') }),
-    provideHttpClient(), // habilita HttpClient
+    provideHttpClient(),
     {
       provide: HTTP_INTERCEPTORS,
       useClass: ErrorInterceptor,
-      multi: true, // registra global
+      multi: true,
     },
+    importProvidersFrom(MatSnackBarModule),
   ],
 };

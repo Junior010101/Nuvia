@@ -2,6 +2,7 @@ import express from "express";
 import dotenv from "dotenv";
 import path from "path";
 import authRoutes from "./routes/authRoutes";
+import cors from "cors";
 
 // aqui entram outras rotas depois: atividades, jogos, materiais, feedback, admin
 
@@ -11,7 +12,8 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 // Middlewares globais
-app.use(express.json()); // pra ler JSON no body
+app.use(cors({ origin: "http://localhost:4200" }));
+app.use(express.json());
 
 // Rotas
 app.use("/auth", authRoutes); // /auth/cadastro, /auth/login

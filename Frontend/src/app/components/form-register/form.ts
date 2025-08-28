@@ -89,7 +89,6 @@ export class FormRegister implements OnInit {
       return;
     }
 
-    // Chamada HTTP pro backend
     this.http
       .post('http://localhost:3000/auth/cadastro', {
         nome,
@@ -99,19 +98,20 @@ export class FormRegister implements OnInit {
       })
       .subscribe({
         next: (res: any) => {
-          // Salva o token JWT no localStorage
-          if (res.token) {
-            localStorage.setItem('token', res.token);
-          }
-
-          // Mostra popup de sucesso
           this.snackBar.open(
             `Usuário ${nome} ${sobrenome} cadastrado com sucesso!`,
             'Fechar',
             { duration: 3000, panelClass: ['popup-sucesso'] }
           );
-
-          this.router.navigate(['/login']);
+          this.router.navigateByUrl('/login');
+        },
+        error: (err: any) => {
+          // aqui você trata todos os erros do backend
+          const msg = err.error?.message || 'Erro na requisição';
+          this.snackBar.open(msg, 'Fechar', {
+            duration: 5000,
+            panelClass: ['popup-erro'],
+          });
         },
       });
   }
