@@ -13,8 +13,8 @@
   <div
     class="flex-grow-1 d-flex flex-column align-items-center text-[#5D5D5D] secondary gap-4"
   >
-    <a (click)="navigateTo('/')" class="cursor-pointer link-secondary">
-      <i class="bi bi-file-earmark-word fs-3"></i>
+    <a (click)="navigateTo('/games')" class="cursor-pointer link-secondary">
+      <i class="bi bi-joystick fs-3"></i>
     </a>
     <a (click)="navigateTo('/')" class="cursor-pointer link-secondary">
       <i class="bi bi-file-earmark-text fs-3"></i>
@@ -26,7 +26,10 @@
 
   <!-- Bottom icons -->
   <div class="d-flex flex-column align-items-center gap-3 text-[#5D5D5D]">
-    <a (click)="navigateTo('/')" class="cursor-pointer link-secondary">
+    <a
+      (click)="navigateTo('/dashboard/settings')"
+      class="cursor-pointer link-secondary"
+    >
       <i class="bi bi-gear fs-3"></i>
     </a>
     <i class="bi bi-person-circle fs-2"></i>

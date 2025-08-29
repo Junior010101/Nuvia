@@ -13,18 +13,25 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@adminjs/express": "^5.0.0",
+    "@adminjs/sequelize": "^3.0.0",
+    "@adminjs/upload": "^3.0.1",
+    "adminjs": "^6.8.7",
     "bcrypt": "^6.0.0",
     "cors": "^2.8.5",
     "dotenv": "^17.2.1",
-    "express": "^5.1.0",
+    "express": "^4.21.2",
     "jsonwebtoken": "^9.0.2",
-    "mysql2": "^3.14.3"
+    "multer": "^2.0.2",
+    "mysql2": "^3.14.3",
+    "sequelize": "^6.37.7"
   },
   "devDependencies": {
     "@types/bcrypt": "^6.0.0",
     "@types/cors": "^2.8.19",
     "@types/express": "^5.0.3",
     "@types/jsonwebtoken": "^9.0.10",
+    "@types/multer": "^2.0.0",
     "@types/node": "^24.2.1",
     "nodemon": "^3.1.10",
     "ts-node": "^10.9.2",

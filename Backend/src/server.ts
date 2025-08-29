@@ -3,8 +3,8 @@ import dotenv from "dotenv";
 import path from "path";
 import authRoutes from "./routes/authRoutes";
 import cors from "cors";
-
-// aqui entram outras rotas depois: atividades, jogos, materiais, feedback, admin
+import { sequelize } from "./config/sequelize";
+import { adminRouter } from "./admin/admin";
 
 dotenv.config({ path: path.resolve(__dirname, "../.env") });
 
@@ -17,6 +17,7 @@ app.use(express.json());
 
 // Rotas
 app.use("/auth", authRoutes); // /auth/cadastro, /auth/login
+app.use("/admin", adminRouter); // painel AdminJS
 
 // Rotas futuras
 // app.use("/atividades", atividadesRoutes);
@@ -25,6 +26,14 @@ app.use("/auth", authRoutes); // /auth/cadastro, /auth/login
 // app.use("/feedback", feedbackRoutes);
 // app.use("/admin", adminRoutes);
 
+// Inicializa Sequelize
+sequelize
+  .authenticate()
+  .then(() => console.log("Banco conectado com sucesso!"))
+  .catch((err) => console.error("Erro ao conectar no banco:", err));
+
+// Aqui sobe o servidor só depois de testar a conexão
 app.listen(PORT, () => {
   console.log(`Servidor rodando na porta ${PORT}`);
+  console.log(`🔑 AdminJS em http://localhost:${PORT}/admin`);
 });

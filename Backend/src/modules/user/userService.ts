@@ -1,4 +1,4 @@
-import { db } from "../../config/database";
+import { User } from "./User";
 import bcrypt from "bcrypt";
 
 export async function CreateUser(
@@ -6,20 +6,16 @@ export async function CreateUser(
   sobrenome: string,
   email: string,
   senha: string
-): Promise<any> {
+) {
   const hashedPassword = await bcrypt.hash(senha, 10);
-
-  const [result]: any = await db.query(
-    "INSERT INTO usuarios (nome, email, senha) VALUES (?, ?, ?)",
-    [nome + " " + sobrenome, email, hashedPassword]
-  );
-
-  return result.insertId;
+  const user = await User.create({
+    nome: nome + " " + sobrenome,
+    email,
+    senha: hashedPassword,
+  });
+  return user.id;
 }
 
 export async function findUserByEmail(email: string) {
-  const [rows]: any = await db.query("SELECT * FROM usuarios WHERE email = ?", [
-    email,
-  ]);
-  return rows[0];
+  return User.findOne({ where: { email } });
 }

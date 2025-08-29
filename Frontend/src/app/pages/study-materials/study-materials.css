@@ -1,0 +1,21 @@
+:root {
+  --bs-primary: #3b82f6;
+  --bs-primary-rgb: 59, 130, 246;
+}
+
+.card-hover {
+  transition: all 0.3s ease;
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  }
+}
+
+.pdf-preview {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 2rem;
+}

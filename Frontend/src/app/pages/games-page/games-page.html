@@ -1,30 +1,62 @@
 <div class="flex flex-row bg-amber-100">
   <app-sidebar />
-  <main class="container">
-    <header>
-      <h1>🔎 Caça-Palavras: Gramática</h1>
-    </header>
+  <!-- CONTEÚDO -->
+  <main class="main">
+    <!-- BANNER -->
+    <section class="banner">
+      <h2>Tá querendo se divertir enquanto estuda?</h2>
+      <p>clique aqui para ser redirecionado ao último jogo adicionado.</p>
+    </section>
 
-    <section class="game-area">
-      <div class="board-wrapper">
-        <div
-          id="board"
-          class="board"
-          role="grid"
-          aria-label="Grade do caça-palavras"
-        ></div>
+    <!-- PAINEL DOS JOGOS -->
+    <section class="panel">
+      <h3>Caça Palavras</h3>
+
+      <div class="cards" role="list">
+        <!-- CARD 1 -->
+        <article class="card" role="listitem" tabindex="0">
+          <img
+            class="thumb"
+            src="assets/img/image.png"
+            alt="Lógica de Programação"
+          />
+          <div class="card-body">
+            <h4 class="title">Lógica de Programação</h4>
+            <p class="desc">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
+          </div>
+        </article>
+
+        <!-- CARD 2 -->
+        <article class="card" role="listitem" tabindex="0">
+          <img class="thumb" src="assets/img/image.png" alt="Adjetivos" />
+          <div class="card-body">
+            <h4 class="title">Adjetivos</h4>
+            <p class="desc">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
+          </div>
+        </article>
+
+        <!-- CARD 3 -->
+        <article class="card" role="listitem" tabindex="0">
+          <img class="thumb" src="assets/img/image.png" alt="Logaritmos" />
+          <div class="card-body">
+            <h4 class="title">Logaritmos</h4>
+            <p class="desc">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
+          </div>
+        </article>
       </div>
 
-      <aside class="sidebar">
-        <h2>Palavras para encontrar</h2>
-        <ul id="wordList" class="word-list"></ul>
-
-        <div class="controls">
-          <button id="clearBtn" class="btn">Limpar</button>
-          <button id="revealBtn" class="btn primary">Revelar</button>
-        </div>
-        <p class="hint">Selecione as letras clicando e arrastando.</p>
-      </aside>
+      <!-- Barra “fake” de scroll do Figma (opcional) -->
+      <div class="fake-scroll"></div>
     </section>
+
+    <p class="foot-note">
+      Outras modalidades serão adicionadas posteriormente...
+    </p>
   </main>
 </div>
