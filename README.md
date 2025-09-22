@@ -1,6 +1,6 @@
 <img src="https://github.com/Junior010101/Nuvia/blob/main/Frontend/src/assets/img/Favicon.png?raw=true" width="200" height="200" />
 
-> Projeto acadêmico desenvolvido para o **Orgulho SESI**, com foco em **gestão, integração e acessibilidade**.  
+> Projeto acadêmico desenvolvido para o **Orgulho De Ser SESI**, com foco em **gestão, integração e acessibilidade**.  
 > O sistema é **real e funcional**, construído em arquitetura monolítica modular.
 
 ![Status](https://img.shields.io/badge/status-Em%20Desenvolvimento-yellow)
@@ -122,6 +122,7 @@ ng serve
 ## 📜 Licença
 
 Este projeto foi desenvolvido **exclusivamente para fins acadêmicos e empresariais (SESI)**. Não é permitida a distribuição, cópia ou uso fora deste contexto.
+
 
 
 
