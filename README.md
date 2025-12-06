@@ -63,6 +63,79 @@ Protótipo inicial criado no **Figma**, representando o fluxo e design da interf
 ## 🔀 Fluxograma
 
 Fluxograma do sistema, detalhando o fluxo de usuários e dados:  
+```mermaid
+flowchart TD
+
+    %% ============================
+    %% FRONTEND
+    %% ============================
+
+    Usuario["Usuário"] --> TelaInicial["Tela Inicial"]
+
+    TelaInicial --> Login["Login"]
+    TelaInicial --> Cadastro["Cadastro"]
+
+    Login --> TelaInicial
+    Cadastro --> TelaInicial
+
+    TelaInicial --> TelaPrincipal["Tela Principal"]
+
+    TelaPrincipal --> EscolherModo["Escolher Modo"]
+
+    EscolherModo --> Exercicios["Exercícios"]
+    EscolherModo --> Pontuacao["Pontuação"]
+    EscolherModo --> VideosAulas["Vídeo-aulas"]
+    EscolherModo --> Atividades["Atividades"]
+    EscolherModo --> MiniJogo["Mini-jogo"]
+    EscolherModo --> MaterialDidatico["Material Didático"]
+
+    Exercicios --> Feedback["Feedback"]
+    Pontuacao --> Feedback
+    VideosAulas --> Feedback
+
+    %% O segundo modo
+    TelaPrincipal --> EscutaRapida["Escuta Rápida"]
+
+    %% Ligações com o backend
+    TelaPrincipal -->|URL Dinâmica| ExpressApi
+    TelaInicial -->|HTTP Request| ExpressApi
+    Login -->|Autenticação| ExpressApi
+
+    %% ============================
+    %% BACKEND
+    %% ============================
+
+    subgraph Backend["Backend (Monolito)"]
+
+        ExpressApi["Express API"]
+
+        subgraph Regras["Regras de negócio"]
+            Midia["Mídia"]
+            Client["Client"]
+            EndingPoint["Ending Point"]
+        end
+
+    end
+
+    %% Relações internas do backend
+    ExpressApi --> Midia
+    ExpressApi --> Client
+    ExpressApi --> EndingPoint
+
+    Midia --> ExpressApi
+    Client --> ExpressApi
+
+    %% Storage e DB
+    EndingPoint -->|NAS KEY| Cloudflare["Cloudflare R2 / Firebase Storage"]
+    EndingPoint -->|Delete/Update| MySQL["Banco de Dados (MySQL)"]
+    MySQL -->|Get/Post| EndingPoint
+
+    %% Admin
+    Admin["Admin"] --> AdminLogin["Login (Admin)"]
+    AdminLogin --> AdminJS["AdminJS"]
+    AdminJS --> ExpressApi
+```
+Visualização mais limpa no: 
 
 [![Figma](https://img.shields.io/badge/Figma-View-blue?logo=figma)](https://www.figma.com/board/K6uekkQey6R03ballExgLq/Fluxograma-Nuvia?t=GPzbP8Z7V2SMTxTA-6)
 
@@ -122,6 +195,7 @@ ng serve
 ## 📜 Licença
 
 Este projeto foi desenvolvido **exclusivamente para fins acadêmicos e empresariais (SESI)**. Não é permitida a distribuição, cópia ou uso fora deste contexto.
+
 
 
 
