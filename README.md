@@ -92,6 +92,7 @@ flowchart TD
     Exercicios --> Feedback["Feedback"]
     Pontuacao --> Feedback
     VideosAulas --> Feedback
+    Feedback --> TelaPrincipal
 
     %% O segundo modo
     TelaPrincipal --> EscutaRapida["Escuta Rápida"]
@@ -195,6 +196,7 @@ ng serve
 ## 📜 Licença
 
 Este projeto foi desenvolvido **exclusivamente para fins acadêmicos e empresariais (SESI)**. Não é permitida a distribuição, cópia ou uso fora deste contexto.
+
 
 
 
