@@ -186,7 +186,7 @@ ng serve
 
 | Avatar | Nome | GitHub |
 |--------|------|--------|
-| <img src="https://avatars.githubusercontent.com/u/169189388?v=4" width="60"> | **Diego Gabriel** | [@diego10gabriel](https://github.com/dgabrieldgs) |
+| <img src="https://avatars.githubusercontent.com/u/169189388?v=4" width="60"> | **Diego Gabriel** | [@dgabrieldgs](https://github.com/dgabrieldgs) |
 | <img src="https://avatars.githubusercontent.com/u/169695398?v=4" width="60"> | **Douglas Rafael** | [@douglasrfsantos](https://github.com/douglasrfsantos) |
 | <img src="https://avatars.githubusercontent.com/u/169388159?v=4" width="60"> | **Jotapeqzz** | [@Jotapeqzz](https://github.com/Jotapeqzz) |
 | <img src="https://avatars.githubusercontent.com/u/203883716?v=4" width="60"> | **Vinícius Rodrigues** | [@ViniciusRodrigues0079](https://github.com/ViniciusRodrigues0079) |
